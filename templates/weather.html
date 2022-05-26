@@ -10,7 +10,18 @@
 
 <h1> Meister </h1>
 
+<form action="/weather" method = "POST">
+    <label for="Stadt">Gib eine Stadt ein:</label><br>
+    <input type="text" name="Stadt" value="Berlin"><br><br>
     
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if city  %}
+  <h1>Stadt: {{city}}</h1>
+  <h1>Status: {{weather_description}}</h1>
+  <h1>Temperatur: {{temperature}}</h1>
+  {% endif  %} 
     
 </body>
 </html>
