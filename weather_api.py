@@ -30,7 +30,7 @@ def getWeather (breitenGrad, längenGrad):
         print("Wetterbeschreibung: " + weather_description)
         print("Temperatur: " + str(temperature))
     
-        return city,weather_description,temperature
+        return city, weather_description, temperature
     else:
         print("Fehler")
 
