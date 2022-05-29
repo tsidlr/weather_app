@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
 import weather_api
+from datetime import date
+
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods = ["GET", "POST"])
 def home():
     return render_template("home.html")
 
@@ -13,8 +15,9 @@ def weather():
         return render_template("weather.html")
     stadt = request.form["Stadt"]
     city,weather_description,temperature = weather_api.getLocation(stadt)
-    print(city,weather_description,temperature)
-    return render_template("weather.html", city = city, weather_description = weather_description, temperature = temperature)
+    today = date.today()
+    
+    return render_template("weather.html", city = city, weather_description = weather_description, temperature = temperature, today = today)
 
 # Test Seite
 @app.route("/test", methods = ["GET", "POST"])

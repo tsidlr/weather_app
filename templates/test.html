@@ -1,66 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    
+<title>Test-Seite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
 
-    <link rel="stylesheet" href="test.css">
-    <title>Test</title>
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
 </head>
 <body>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-4 col-sm-12 col-xs-12"> 
-                   <div class="card p-4">    
-                    
-                       <div class="d-flex">
-                           <h6 class="flex-grow-1">London</h6>
-                           <h6>16:08</h6>
-                       </div>
-                        
-                       <div class="d-flex flex-column temp mt-5 mb-3">
-                           <h1 class="mb-0 font-weight-bold" id="heading"> 13&deg; C </h1>
-                           <span class="small grey">Stormy</span>
-                       </div>
-                       
-                       <div class="d-flex">
-                           <div class="temp-details flex-grow-1">
-                                <p class="my-1">
-                                    <img src="https://i.imgur.com/B9kqOzp.png" height="17px" >
-            
-                                   <span> 40 km/h  </span>
-                                </p>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-                                <p class="my-1"> 
-                                   <i class="fa fa-tint mr-2" aria-hidden="true"></i>
-                                   <span> 84% </span> 
-                                </p>
-
-                                <p class="my-1"> 
-                                    <img src="https://i.imgur.com/wGSJ8C5.png" height="17px" >
-                                    <span> 0.2h </span>
-                                </p>
-                           </div>
-                           
-                           <div>
-                               <img src="https://i.imgur.com/Qw7npIg.png" width="100px">
-                           </div>
-                           
-                           
-                       </div>
-                        
-          
-                    </div>
-            </div>
-        </div>
-
-
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3-xlarge">Test Seite</h1>
+  <h1>Wetter Appp</h1>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="/" class="w3-bar-item w3-button">Home</a>
+      <a href="/weather" class="w3-bar-item w3-button w3-light-grey">Wetter</a>
+      <a href="/test" class="w3-bar-item w3-button">Test-Seite</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small">Nichts</a>
     </div>
+    <form action="/weather" method = "POST">
+    <label for="Stadt">Gib eine Stadt ein:</label><br>
+    <input type="text" name="Stadt"><br><br>
+    <input type="submit" value="Check!">
+  </form>
+  </div>
+</header>
+
+<!-- Photo Grid -->
+
+<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
     
+  <div class="w3-half">
+    </div>
+<article class="widget">
+  <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+  <div class="weatherInfo">
+    <div class="temperature">platz<span>&deg;</span></div>
+    <div class="description">    
+      <div class="weatherCondition">plat</div>    
+      <div class="place">city</div>
+    </div>
+  </div>
+  <div class="date">datum</div>
+</article>
+</div>
+  </div>
+
+  
+</div>
+
+  
+ <!-- End Page Content -->
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+  <a href="https://www.instagram.com/t_sidlr/" target="_blank" i class="fa fa-instagram w3-hover-opacity"></i>
+  <a href="https://www.linkedin.com/in/thomas-sidlarski-b8a520205/" target="_blank" i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://github.com/KoesterJannik" target="_blank" class="w3-hover-text-green">Jannik Köster</a></p>
+</footer>
+
 </body>
 </html>

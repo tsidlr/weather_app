@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
 body {
-  background-color: #A64253;
+  
+  
   font-family: Poiret One;
 }
 
@@ -68,7 +70,7 @@ body {
 .widget .date {
   flex: 0 0 30%;
   height: 40%;
-  background: #70C1B3;
+  background: #42a191;
   border-bottom-right-radius: 20px;
   display: flex;
   justify-content: space-around;
