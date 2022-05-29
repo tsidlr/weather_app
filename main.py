@@ -16,6 +16,13 @@ def weather():
     print(city,weather_description,temperature)
     return render_template("weather.html", city = city, weather_description = weather_description, temperature = temperature)
 
+# Test Seite
+@app.route("/test", methods = ["GET", "POST"])
+def test():
+    if request.method == "GET": 
+        return render_template("test.html")
+
+    return render_template("weather.html")
 app.run(debug=True)
 
 
