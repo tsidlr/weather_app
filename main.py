@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/", methods = ["GET", "POST"])
 def home():
-    return render_template("home.html")
+    return render_template("shared/base.html")
 
 
 @app.route("/weather", methods = ["GET", "POST"])
@@ -26,6 +26,8 @@ def test():
         return render_template("test.html")
 
     return render_template("weather.html")
+
+
 app.run(debug=True)
 
 

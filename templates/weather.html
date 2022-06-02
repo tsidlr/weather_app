@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
-    <style>
-      body,h1 {font-family: "Raleway", Arial, sans-serif}
-      h1 {letter-spacing: 6px}
-      .w3-row-padding img {margin-bottom: 12px}
-      </style>
-    
-    <title>Wetter</title>
-</head>
-<body>
-  
-  
-  <div style="text-align: center">
+{% extends "shared/base.html" %} {% block content %}
 
-   
-      <h1 class="w3-xlarge">Wetter App</h1>
-      
-      
-      <div class="w3-padding-32">
-        <div class="w3-bar w3-border">
-          <a href="/" class="w3-bar-item w3-button">Home</a>
-          <a href="/weather" class="w3-bar-item w3-button w3-light-grey">Wetter</a>
-          <a href="/test" class="w3-bar-item w3-button">Test-Seite</a>
-          <a href="#" class="w3-bar-item w3-button w3-hide-small">Nichts</a>
-        </div>
-      </div>
-   
-   
-    
-
+<!-- !PAGE CONTENT! -->
     <form action="/weather" method = "POST">
       <label for="Stadt">Gib eine Stadt ein:</label><br>
       <input type="text" name="Stadt"><br><br>
@@ -48,7 +15,6 @@
   {% endif  %} 
     -->
 
-</div>
 <article class="widget">
   <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
   <div class="weatherInfo">
@@ -61,7 +27,5 @@
   <div class="date">{{today}}</div>
 </article>
 
-
-
-</body>
-</html>
+  
+  {% endblock %}
